@@ -14,7 +14,7 @@ import com.javalec.command.Command;
 /**
  * Servlet implementation class FrontController
  */
-@WebServlet("/FrontController")
+@WebServlet("*.do")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -59,8 +59,8 @@ public class FrontController extends HttpServlet {
 		System.out.println(com);		//  /list.do라고 뜸(이걸로 페이지를 판단)
 
 		switch (com) {
-		case ("/indexx.do"):
-			viewPage = "indexx.jsp";
+		case ("/step2.do"):
+			viewPage = "step2.jsp";
 			break;
 		default:
 			break;
