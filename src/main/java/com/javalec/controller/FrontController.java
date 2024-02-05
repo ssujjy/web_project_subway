@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.javalec.command.Command;
+import com.javalec.command.FastSubStep2Command;
 
 /**
  * Servlet implementation class FrontController
@@ -60,7 +61,14 @@ public class FrontController extends HttpServlet {
 
 		switch (com) {
 		case ("/step2.do"):
+			command = new FastSubStep2Command();
+			command.execute(request, response);
 			viewPage = "step2.jsp";
+			break;
+		case ("/step3.do"):
+			command = new FastSubStep2Command();
+			command.execute(request, response);
+			viewPage = "step3.jsp";
 			break;
 		default:
 			break;

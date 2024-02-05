@@ -194,10 +194,197 @@
 						</div>
 					</div>
 
+					<ol class="menu_select">
+					    <li class="step01">
+					        <dl>
+					            <dt>
+					                <strong>STEP 01</strong>
+					                필수 선택 *
+					            </dt>
+					            <dd>
+					                <ul>
+					                    <li class="on">
+					                        <span><a data-combination="Y">길이 선택</a></span>
 					
-
-					<div class="btn_area">
+					                        <!--<a th:attr="data-combination=${isCombination ? 'Y' : 'N'}" th:id="${isCombination ? '' : 'breadType'}">길이 선택</a>-->
+					                    </li>
+					
+					                    <li name="bread" class="on">
+					                        <a data-combination="Y">빵 선택</a>
+					                    </li>
+					
+					
+					
+					
+					                    <!-- #210818 페퍼로니 피자썹: 빵,데우기만 선택 가능 -->
+					
+					
+					                    <li name="cheese" class="on">
+					                        <a data-combination="Y">치즈 선택</a>
+					                    </li>
+					
+					
+					                    <!-- #210818 썹도그: 빵,데우기, 치즈만 선택 가능 -->
+					
+					
+					                    <li name="vegetable" class="on">
+					                        <a data-combination="Y">야채 선택</a>
+					                    </li>
+					
+					
+					
+					                    <li name="sauce" class="on">
+					                        <a style="width: 140px;" data-combination="Y">소스/시즈닝 선택</a>
+					                    </li>
+					
+					
+					
+					
+					
+					                </ul>
+					                <!-- <span>미선택 시 추천조합으로 자동 선택됩니다.</span> -->
+					                <p>
+					                    <!-- 빵길이 -->
+					                    <th:object>15cm</th:object>
+					
+					                    <!-- 빵종류 -->
+					                    <th:object>, 위트</th:object>
+					
+					                    <!-- 토스팅 여부 -->
+					                    <th:object>(토스팅)</th:object>
+					
+					                    <!-- 치즈 -->
+					                    <th:object>, 슈레드치즈</th:object>
+					
+					                    <!-- 야채 -->
+					
+					
+					                    <th:object>, 오이</th:object>
+					
+					
+					                    <th:object>, 토마토</th:object>
+					
+					
+					                    <th:object>, 할라피뇨</th:object>
+					
+					
+					                    <th:object>, 양상추</th:object>
+					
+					
+					                    <th:object>, 올리브</th:object>
+					
+					
+					                    <th:object>, 피클</th:object>
+					
+					
+					                    <th:object>, 양파</th:object>
+					
+					
+					                    <th:object>, 피망</th:object>
+					
+					
+					
+					
+					                    <!-- 소스 -->
+					
+					
+					                    <th:object>, 홀스래디쉬</th:object>
+					
+					
+					                    <th:object>, 랜치</th:object>
+					
+					
+					
+					                </p>
+					            </dd>
+					        </dl>
+					    </li>
+					
+					
+					    <li class="step02">
+					        <dl>
+					            <dt>
+					                <strong>STEP 02</strong>
+					                추가 선택
+					            </dt>
+					            <dd>
+					                <div>
+					                    <ul>
+					                        <!-- #210818 썹도그, 페퍼로니 피자썹: 미트추가, 토핑추가 불가 -->
+					                        <li>
+					                            <!--<a th:id="${'Y' == ordItemsVO.promotionYn && 'N' == ordItemsVO.selectToppingYn ?'' : 'extra'}">추가 선택</a>-->
+					                            <a id="extra">추가 선택</a>
+					                        </li>
+					                        <li>
+					                            <a id="doubleUp">미트 추가</a>
+					                        </li>
+					                    </ul>
+					                    <div>
+					
+					
+					
+					                    </div>
+					                </div>
+					            </dd>
+					        </dl>
+					    </li>
+					    <li class="step03">
+					
+					        <dl>
+					            <dt>
+					                <strong>STEP 03</strong>
+					                상품 선택
+					            </dt>
+					            <dd>
+					                <div>
+					                    <ul>
+					
+					                        <li class="on">
+					                            <a href="javascript:void(0);">단품</a>
+					                        </li>
+					
+					                        <li>
+					                            <a id="set">세트</a>
+					                        </li>
+					
+					
+					                    </ul>
+					                    <div>
+					
+					                    </div>
+					                </div>
+					            </dd>
+					        </dl>
+					
+					    </li>
+					
+					</ol>
+					
+					<div class="menu_total">
+						<input name="eachPrice" type="hidden" value="7900" />
+						<dl class="count">
+							<dt>수량</dt>
+							<dd>
+								<a class="minus" href="javascript:;" id="qtySub">수량 빼기</a>
+								<input id="ordQty" onfocus="this.blur();" type="text" value="1" />
+								<a class="plus" href="javascript:;" id="qtyAdd">수량 더하기</a>
+							</dd>
+						</dl>
+						<dl class="total_won">
+							<dt>총 주문 금액</dt>
+							<dd>
+								<strong id="finalAmt">7,900</strong>
+								<span>원</span>
+							</dd>
+						</dl>
 						
+					</div>
+					
+					<div class="btn_area">
+						<button class="btn bgc_white btn_side" onclick="item.checkCup(this, 'S');return false;" type="button"><span>사이드추가</span></button>
+						<button class="btn bgc_white btn_cart" onclick="item.checkCup(this, 'C');return false;" type="button"><span>장바구니</span></button>
+						<button class="btn i_reg btn_order bgc_point" onclick="item.checkCup(this, 'B');return false;" type="button"><span>주문하기</span></button>
+							
 						<button class="btn i_reg btn_order bgc_point" id="orderBtn" type="button" data-promotionYn="N" data-itemType="ITEM_SALAD" data-morningYn="N"><span>주문 시작하기</span></button>
 
 						<!--<button type="button" id="itemConbiPopBtnSubpick" class="btn bgc_point i_reg" style="width:183px;" th:if="${'N' == ordItemsVO.selectChoiceYn && itemCombination != null && itemInfo.subpickYn == 'Y'}"
