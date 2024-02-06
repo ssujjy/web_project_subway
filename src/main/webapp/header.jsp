@@ -32,13 +32,13 @@
                     <div class="dp2">
                         <ul>
                             <li>
-                                <a href="/menuList/sandwich">샌드위치</a>
+                                <a href="/menuList/sandwich.do">샌드위치</a>
                             </li>
                             <li>
-                                <a href="/menuList/unit">랩ㆍ기타</a>
+                                <a href="/menuList/unit.do">랩ㆍ기타</a>
                             </li>
                             <li>
-                                <a href="/menuList/salad">샐러드</a>
+                                <a href="/menuList/salad.do">샐러드</a>
                             </li>
                         </ul>
                     </div>

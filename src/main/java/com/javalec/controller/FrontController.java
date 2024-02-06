@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.javalec.command.Command;
 import com.javalec.command.FastSubStep2Command;
+import com.javalec.command.MenuListCommand;
+import com.javalec.command.SaladListCommand;
+import com.javalec.command.SandwichListCommand;
+import com.javalec.command.UnitListCommand;
 
 /**
  * Servlet implementation class FrontController
@@ -60,6 +64,21 @@ public class FrontController extends HttpServlet {
 		System.out.println(com);		//  /list.do라고 뜸(이걸로 페이지를 판단)
 
 		switch (com) {
+		case ("/menuList/sandwich.do"):
+			command = new SandwichListCommand();
+			command.execute(request, response);
+			viewPage = "menuList/sandwich.jsp";
+			break;
+		case ("/menuList/salad.do"):
+			command = new SaladListCommand();
+			command.execute(request, response);
+			viewPage = "menuList/salad.jsp";
+			break;
+		case ("/menuList/unit.do"):
+			command = new UnitListCommand();
+			command.execute(request, response);
+			viewPage = "menuList/unit.jsp";
+			break;
 		case ("/step2.do"):
 			command = new FastSubStep2Command();
 			command.execute(request, response);
