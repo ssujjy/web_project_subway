@@ -1,19 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <%--
 		* ----------------------------------------
-		 *  Description : 풋터.
-		 *  Date        : 2024.02.02(Fri)
+		 *  Title		: 푸터.
+		 *  Description	: 공통파일 푸터.
 		 *  Author      : sujin
+		 *  Date        : 2024.02.02(Fri) Ver0.0 
+		 				- 파일 생성
+		 * 				: 2024.02.06(Tue) Ver0.1
+		 				- HTML Tag 제거. 
 		 * ----------------------------------------
  --%>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>footer</title>
-</head>
-<body>
 <!-- inc footer s -->
     <div id="footer">
 	    <div class="content">
@@ -37,5 +34,3 @@
 	    </div>
 	</div>
 <!--// inc footer e -->
-</body>
-</html>
