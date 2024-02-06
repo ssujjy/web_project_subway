@@ -48,7 +48,7 @@ public class MenuDao {
 					+ "WHERE mnctg ='"+mnctg+"'";			
 			preparedStatement = connection.prepareStatement(query);
 			resultset = preparedStatement.executeQuery();
-
+			System.out.println(query);
 			while (resultset.next()) {
 				
 				int mncode = resultset.getInt("mncode"); 
