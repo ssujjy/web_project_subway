@@ -64,6 +64,11 @@ public class FrontController extends HttpServlet {
 		System.out.println(com);		//  /list.do라고 뜸(이걸로 페이지를 판단)
 
 		switch (com) {
+		case ("/mypage.do"):	// 매장찾기
+//			command = new SandwichListCommand();
+//			command.execute(request, response);
+			viewPage = "mypage.jsp";
+			break;
 		case ("/storeSearch.do"):	// 매장찾기
 //			command = new SandwichListCommand();
 //			command.execute(request, response);
@@ -79,27 +84,27 @@ public class FrontController extends HttpServlet {
 //			command.execute(request, response);
 			viewPage = "freshInfo.jsp";
 			break;
-		case ("/sandwich.do"):
+		case ("/sandwich.do"):	// 샌드위치 메뉴소개
 			command = new SandwichListCommand();
 			command.execute(request, response);
 			viewPage = "menuList/sandwich.jsp";
 			break;
-		case ("/salad.do"):
+		case ("/salad.do"):	// 샐러드 메뉴소개
 			command = new SaladListCommand();
 			command.execute(request, response);
 			viewPage = "menuList/salad.jsp";
 			break;
-		case ("/unit.do"):
+		case ("/unit.do"):	// 랩, 기타 메뉴소개
 			command = new UnitListCommand();
 			command.execute(request, response);
 			viewPage = "menuList/unit.jsp";
 			break;
-		case ("/step2.do"):
+		case ("/step2.do"):	// 주문 2단계.
 			command = new FastSubStep2Command();
 			command.execute(request, response);
 			viewPage = "step2.jsp";
 			break;
-		case ("/step3.do"):
+		case ("/step3.do"):	// 주문 3단계.
 			command = new FastSubStep2Command();
 			command.execute(request, response);
 			viewPage = "step3.jsp";
